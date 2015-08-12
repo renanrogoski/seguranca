@@ -56,9 +56,9 @@ def criptografia_vigenere(chave, texto):
 	ord_chave=[]
 	ch_=[]
 	for t in texto:
-		ord_texto.append(ord(t))
+		ord_texto.append(ord(t)%128)
 	for c in chave:
-		ord_chave.append(ord(c))
+		ord_chave.append(ord(c)%128)
 	print(ord_texto)
 	print(ord_chave)
 	i=0
