@@ -28,14 +28,18 @@ def criptografia(textoInicial, chave):
         cifra += chr(ord_c)
     return cifra
 	
-def descriptografia(texto_cesar, chave):
-	texto_list = list(texto_cesar)
+'''def descriptografia(texto_cesar, chave):
+	#texto_list = list(texto_cesar)
 	texto = ''
-	for x in texto_list:
-		ord_c = (ord(x) - chave)%256
+	for x in texto_cesar:
+		ord_c = (ord(x) + (chave*(-1)))%256
         texto += chr(ord_c)
-	return texto
+	return texto'''
 
+def inverte_sinal(chave):
+	ch_= chave *-1
+	return ch_
+	
 def getKey():
     key = 0
     while True:
@@ -44,6 +48,8 @@ def getKey():
         if (key >= 0 and key <= MAX_KEY_SIZE):
             return key
 
+'''import pdb
+pdb.set_trace()'''
 chave = getKey()
 textoInicial = abre_arquivo('textoinicial.txt')
 cifrado = criptografia(textoInicial, chave)
@@ -51,5 +57,9 @@ gravar_arquivo('criptografado.txt', cifrado)
 
 
 texto_cesar = abre_arquivo('criptografado.txt')
-descriptografado = descriptografia(texto_cesar, chave)
+descriptografado = criptografia(texto_cesar, inverte_sinal(chave))
 gravar_arquivo('descriptografado.txt', descriptografado)
+
+print(textoInicial)
+print(cifrado)
+print(descriptografado)
