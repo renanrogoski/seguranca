@@ -18,33 +18,6 @@ def gravar_arquivo(nome, conteudo):
     arquivo.write(conteudo)
     arquivo.close()
 
-'''def cria_chave(chave, texto):
-	
-	if len(chave) < len(texto):
-		novaChave = chave * (len(texto)/len(chave))
-		if len(novaChave):
-			return novaChave
-	return chave'''
-
-
-
-'''def cria_chave(chave, texto):
-	
-	if len(chave) < len(texto):
-		novaChave = chave * (len(texto)/len(chave))
-		if len(novaChave) < len(texto):
-			i= (len(texto)-len(novaChave))
-			for i in novaChave:
-				novaChave[i] = 
-				return novaChave
-				
-			 
-			
-			return novaChave
-		if len(novaChave):
-			return novaChave
-	return chave'''
-
 def cria_chave(chave, texto):
 	
 	if len(chave) < len(texto):
