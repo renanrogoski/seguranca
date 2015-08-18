@@ -1,1 +1,2 @@
 O ruim de código pequeno é que a tendencia de quanto menor mais ilegível.No caso não está tão ilegível, mas também eu não trato as coisas em classes, ou seja não da para aproveitar nada, mas é funcional.
+Também não vem com instruções do tipo usage.Bom, adorei a ideia do desafio, valeu mmxm, sua iniciativa me estimulo.          

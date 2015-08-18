@@ -1,0 +1,1 @@
+Introdução à linguagem Python e ao framework Django. Esse livro foi escrito para atender à demanda de desenvolvedores de aplicações Web que usam outras linguagens de programação e querem aprender a usar Python e Django para melhorar sua produtividade. Para os desenvolvedores que tem site ou blog ,ou pretende ter um , este livro é altamente recomendado.
