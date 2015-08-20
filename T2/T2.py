@@ -26,9 +26,6 @@ def descobre_cesar(textoinicial, textocripto):
  
 	cesar = T1cesar.criptografia(textoinicial,chave)
 
-	if((vlrcry - chave) == vlrini):
-		print "pode ser cesar"
-
 	'''tam = len(textoinicial)
 	j=0
 	for r in textoinicial:
@@ -48,12 +45,13 @@ def descobre_cesar(textoinicial, textocripto):
 	else:
 		return 0
 
+
 def descobre_vigenere(textoinicial, textocripto):
 	chave_compl = descobre_chave_completa(textoinicial, textocripto)
-
+	#print chave_compl
 	chave = ''
 	i=0
-	for x in chave_compl:
+	for x in xrange (0,200):
 		
 		ord_c = ord(chave_compl[i])
 		chave += chr(ord_c)
@@ -62,7 +60,7 @@ def descobre_vigenere(textoinicial, textocripto):
 			print "vigenere"
 			return chave
 		i += 1
-	return chave_completa
+	return 0
 
 def descobre_chave_completa(textoinicial, textocripto):
 	chave_com = ''
@@ -75,15 +73,18 @@ def descobre_chave_completa(textoinicial, textocripto):
 
 
 
-textoinicial = abre_arquivo_in("pg27827.txt")
+textoinicial = abre_arquivo_in("pg1661.txt")
 
-textocripto = abre_arquivo_out("pg27827.txt.enc")
+textocripto = abre_arquivo_out("pg1661.txt.enc")
 
 
 cesar = descobre_cesar(textoinicial,textocripto)
 print cesar
+if(cesar != 0):
+	desc_cesar = T1cesar.criptografia(textocripto,T1cesar.inverte_sinal(cesar))
+	print desc_cesar
 
-
-vigenere = descobre_vigenere(textoinicial, textocripto)
-print vigenere
-#print(textoinicial)
+if(cesar == 0):
+	vigenere = descobre_vigenere(textoinicial, textocripto)
+	print vigenere
+	#print(textoinicial)
