@@ -57,7 +57,7 @@ def inverte_sinal(chave):
 	chave = ''.join(ch_)
 	return chave
 
-chave = abre_arquivo('chavevigenere.txt')
+'''chave = abre_arquivo('chavevigenere.txt')
 texto = abre_arquivo('textoinicial.txt')
 chaveCompl = cria_chave(chave, texto)
 crypt = criptografia_vigenere(chaveCompl, texto)
@@ -69,4 +69,4 @@ print(texto)
 print(chaveCompl)
 
 print(crypt)
-print(decrypt)
+print(decrypt)'''
